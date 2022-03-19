@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 * order-service
 * customer-service
 * product-service
-* payment-service
+* [payment-service](https://github.com/Aasifali1/payment-service)
 
 ## Development server
 
