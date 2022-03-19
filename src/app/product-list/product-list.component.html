@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="card">
+      <h2 align="center"> Product List</h2>
+      <div class="card-body">
+        <table class = "table table-striped" align="center">
+          <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor = "let product of products" >
+            <td> {{ product.name }} </td>
+            <td> {{ product.description }} </td>
+            <td> {{ product.price }} </td>
+  
+            <button (click) = "updateProduct(product.id)" class = "btn btn-info"> Update</button>
+            <button (click) = "deleteProduct(product.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+            <!--      <button (click) = "employeeDetails(employee.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>-->
+  
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  

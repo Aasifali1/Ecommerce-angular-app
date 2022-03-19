@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="card">
+    <h2 align="center"> Order List</h2>
+    <div class="card-body">
+      <table class = "table table-striped" align="center">
+        <thead>
+        <tr>
+          <th>Customer</th>
+          <th>Product</th>
+          <th>Qantity</th>
+          <th>Amount</th>
+          <th>Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor = "let order of orders" >
+          <td> {{ order.customerId }} </td>
+          <td> {{ order.productId }} </td>
+          <td> {{ order.quantity }} </td>
+          <td> {{ order.amount }} </td>
+          <td> {{ order.orderStatus }} </td>
+
+          <!--      <button (click) = "updateEmployee(employee.id)" class = "btn btn-info"> Update</button>-->
+          <!--      <button (click) = "deleteEmployee(employee.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>-->
+          <!--      <button (click) = "employeeDetails(employee.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>-->
+
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

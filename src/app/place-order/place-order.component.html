@@ -1,0 +1,105 @@
+<div class="row">
+    <div class="col-md-8">
+        <div class="prod-info-main prod-wrap clearfix">
+            <div class="row">
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <div class="product-image">
+                        <img
+                            src="{{product.imagePath}}"
+                            class="img-responsive"
+                        >
+                        <span class="tag2 hot">HOT</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <div class="product-deatil">
+                        <h5 class="name">
+                            <a href="#" class="display-4">{{ product.name }}</a>
+                            <a href="#">
+                                <span>Product Category</span>
+                            </a>
+                        </h5>
+                        <p class="price-container">
+                            <span class="text-dark">
+                                <b>
+                                    {{ product.price  | currency:'INR':'symbol-narrow':'4.2-2'}}
+                                </b>
+                            </span>
+                        </p>
+                        <span class="tag1"></span>
+                    </div>
+                    <div class="description">
+                        <p>{{ product.description }}</p>
+                    </div>
+                    <div class="product-info smart-form">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <a
+                                    (click)="placeOrder(product.id,customerId)"
+                                    class="btn btn-warning text-dark    "
+                                >
+                                    <!-- Add to cart -->
+                                    Place Your Order
+                                </a>
+                                <a
+                                    href="javascript:void(0);"
+                                    class="btn btn-info"
+                                >
+                                    More info
+                                </a>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="rating">
+                                    Rating:
+                                    <label for="stars-rating-5">
+                                        <i class="fa fa-star text-danger"></i>
+                                    </label>
+                                    <label for="stars-rating-4">
+                                        <i class="fa fa-star text-danger"></i>
+                                    </label>
+                                    <label for="stars-rating-3">
+                                        <i class="fa fa-star text-danger"></i>
+                                    </label>
+                                    <label for="stars-rating-2">
+                                        <i class="fa fa-star text-warning"></i>
+                                    </label>
+                                    <label for="stars-rating-1">
+                                        <i class="fa fa-star text-warning"></i>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end product -->
+
+    <div class="col-4 mt-3">
+        <div class="card bg-light border-warning mb-3" style="max-width: 30rem;">
+            <div class="card-header text-secondary font-weight-bold">PRICE DETAILS</div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6">
+                        <h4 class="card-title">Price</h4>
+                        <h5>Delivery Charges</h5>
+                    </div>
+                    <div class="col-6">
+                        <h4>{{ product.price  | currency:'INR':'symbol-narrow':'4.2-2'}}</h4>
+                        <h5 class="text-success font-weight-bold">FREE</h5>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-6">
+                        <p class="font-weight-bold">Total</p>
+                    </div>
+                    <div class="col6">
+                        <p>{{ product.price  | currency:'INR':'symbol-narrow':'4.2-2'}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

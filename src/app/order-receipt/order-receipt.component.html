@@ -1,0 +1,187 @@
+<div class="container mb-4">
+    <div class="row d-flex cart justify-content-center">
+        <div class="col-md-10">
+            <div class="card">
+                <div class="d-flex justify-content-center border-bottom">
+                    <div class="p-3">
+                        <div class="progresses">
+                            <div class="steps">
+                                <span>
+                                    <i class="fa fa-check"></i>
+                                </span>
+                            </div>
+                            <span class="line"></span>
+                            <div class="steps">
+                                <span>
+                                    <i class="fa fa-check"></i>
+                                </span>
+                            </div>
+                            <span class="line"></span>
+                            <div class="steps">
+                                <span class="font-weight-bold">3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-0">
+                    <div class="col-md-6 border-right p-5">
+                        <div class="text-center order-details">
+                            <div class="d-flex justify-content-center mb-5 flex-column align-items-center">
+                                <span class="check1">
+                                    <i class="fa fa-check"></i>
+                                </span>
+                                <span class="font-weight-bold">Order Confirmed</span>
+                                <small class="mt-2">Thank you for shopping with us</small>
+                                <a href="#"
+                                    class="text-decoration-none invoice-link">
+                                    Shopping more
+                                </a>
+                            </div>
+                            <button (click)="trackOrder(order.id)" class="btn btn-danger btn-block order-button">
+                                Track your Order
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 background-muted">
+                        <!-- order -->
+                        <!-- <div class="col-md-8">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <div class="product-image">
+                    <img
+                        src="{{product.imagePath}}"
+                        class="img-responsive">
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="product-deatil">
+                    <a href="#" class="">{{ product.name }}</a>
+                    <a href="#">Product Category</a>
+                    <p class="price-container">
+                        <span class="text-dark">
+                            <b>
+                                {{ product.price  | currency:'INR':'symbol-narrow':'4.2-2'}}
+                            </b>
+                        </span>
+                    </p>
+                    <span class="tag1"></span>
+                </div>
+                <div class="description">
+                    <p>{{ product.description }}</p>
+                </div>
+                <div class="product-info smart-form">
+                    <div class="row">
+                        <div class="col-md-12">
+                      
+                            <a
+                                href="javascript:void(0);"
+                                class="btn btn-info"
+                            >
+                                More info
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div> -->
+                        <!-- end product -->
+                        <div class="p-3 border-bottom">
+                            <h4 class="text-info">
+                                <i class="fa fa-clock-o text-muted"></i>
+                                3 days delivery
+                            </h4>
+                            <hr>
+                            <div class="row">
+                                <div class="col-6">
+                                    <h5 class="mb-0 text-primary">
+                                        <b>{{ product.name }}</b>
+                                    </h5>
+                                    <h5 class="d-block mb-0 text-secondary">Includes: Charger, Earphone</h5>
+                                    <b class="text-secondary">Qty : {{order.quantity}}</b>
+                                </div>
+                                <div class="col-6">
+                                    <div class="product-image">
+                                        <img
+                                            width="150px"
+                                            src="{{product.imagePath}}"
+                                            class="img-responsive"
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-3">
+                                <div class="d-flex flex-column mt-3">
+                                    <small>
+                                        <i class="fa fa-check text-muted"></i>
+                                        Vector file
+                                    </small>
+                                    <small>
+                                        <i class="fa fa-check text-muted"></i>
+                                        Sources files
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row g-0 border-bottom">
+                            <div class="col-md-6 border-right">
+                                <div class="p-3 d-flex justify-content-center align-items-center">
+                                    <span>x1</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-3 d-flex justify-content-center align-items-center">
+                                    <span>
+                                        {{ product.price  | currency:'INR':'symbol-narrow':'4.2-2'}}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row g-0 border-bottom">
+                            <div class="col-md-6">
+                                <div class="p-3 d-flex justify-content-center align-items-center">
+                                    <span>Subtotal</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-3 d-flex justify-content-center align-items-center">
+                                    <span>
+                                        {{ product.price  | currency:'INR':'symbol-narrow':'4.2-2'}}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row g-0 border-bottom">
+                            <div class="col-md-6">
+                                <div class="p-3 d-flex justify-content-center align-items-center">
+                                    <span>Processing fees</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-3 d-flex justify-content-center align-items-center">
+                                    <span>
+                                        {{ 78.08  | currency:'INR':'symbol-narrow':'.2-2'}}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row g-0">
+                            <div class="col-md-6">
+                                <div class="p-3 d-flex justify-content-center align-items-center">
+                                    <span class="font-weight-bold">Total</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-3 d-flex justify-content-center align-items-center">
+                                    <span class="font-weight-bold">
+                                        {{ product.price - 78.08  | currency:'INR':'symbol-narrow':'4.2-2'}}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

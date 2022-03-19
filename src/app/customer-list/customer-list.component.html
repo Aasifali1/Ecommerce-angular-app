@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="card">
+    <h2 align="center"> Customer List</h2>
+
+    <div class="card-body">
+      <table class = "table table-striped" align="center">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Address</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor = "let customer of customers" >
+          <td> {{ customer.name }} </td>
+          <td> {{ customer.email }} </td>
+          <td> {{ customer.address }} </td>
+
+          <!--      <button (click) = "updateEmployee(employee.id)" class = "btn btn-info"> Update</button>-->
+          <!--      <button (click) = "deleteEmployee(employee.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>-->
+          <button (click) = "getProductCatalog(customer.id)" class = "btn btn-info" style="margin-left: 10px"> Product Catalog</button>
+
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
