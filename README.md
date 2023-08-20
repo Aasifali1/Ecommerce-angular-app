@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.4.
 
-## The backend of this application is:
+## The backend services of this application:
 * [order-service](https://github.com/Aasifali1/Order-service)
 * [customer-service](https://github.com/Aasifali1/customer-service)
 * [product-service](https://github.com/Aasifali1/product-service)
